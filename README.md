@@ -16,6 +16,12 @@ A responsive 2026/27 Fantasy Premier League settlement dashboard for **Weekly Tr
 
 Install dependencies with `npm install`, then start the local site with `npm run dev`. Create a production build with `npm run build`.
 
+## Deploy to Vercel
+
+Import this repository into Vercel and deploy it with the detected **Next.js** framework preset. No environment variables are required for the current application. Vercel will install dependencies and run `npm run build` automatically.
+
+For a CLI deployment, run `npx vercel` for a preview or `npx vercel --prod` for production. The legacy Cloudflare/vinext commands remain available as `npm run dev:cloudflare`, `npm run build:cloudflare`, and `npm run start:cloudflare`.
+
 ## FPL API and CORS
 
 Browsers commonly block direct cross-origin requests to the public FPL API. This project includes a small same-origin relay at `app/api/fpl/route.ts`; requests are restricted to FPL `/api/` paths. The page uses this relay by default.
