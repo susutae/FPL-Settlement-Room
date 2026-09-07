@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <Script id="theme-init" strategy="beforeInteractive">
-        {`(()=>{let saved;try{saved=localStorage.getItem("fpl-theme:v1")}catch{}const prefersDark=typeof matchMedia==="function"&&matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.dataset.theme=saved==="light"||saved==="dark"?saved:prefersDark?"dark":"light"})()`}
+        {`(()=>{let saved;try{saved=localStorage.getItem("fpl-theme:v1")}catch{}document.documentElement.dataset.theme=saved==="light"||saved==="dark"?saved:"dark"})()`}
       </Script>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
