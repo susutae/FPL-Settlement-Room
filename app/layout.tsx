@@ -18,9 +18,9 @@ export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();
   const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "localhost:3000";
   const protocol = requestHeaders.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
-  const image = `${protocol}://${host}/og.png`;
+  const image = `${protocol}://${host}/og-futuristic.png`;
   const title = "FPL Settlement Room — Weekly Treat League";
-  const description = "Weekly FPL rankings, prizes and season settlement for Weekly Treat League (73572).";
+  const description = "A live football match centre for weekly FPL rankings, prizes and season settlement in Weekly Treat League (73572).";
   return {
     title,
     description,
